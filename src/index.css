@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Tailwind v4: registrar tokens (así funcionan text-primary, bg-primary/20, to-dark, etc.) */
+@theme {
+  --color-dark: #020617;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #020617; }
+
+/* Dark-map look */
+#mapFrame {
+  filter: invert(92%) hue-rotate(180deg) brightness(0.95) contrast(0.9) saturate(0.9);
+}
+@media (hover:hover) {
+  #mapFrame:hover {
+    filter: invert(88%) hue-rotate(180deg) brightness(1) contrast(0.95) saturate(1);
+  }
+}
